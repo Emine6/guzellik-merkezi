@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LuxeAura Beauty & Wellness - Profesyonel Medikal Cilt Bakımı, Buz Başlık Lazer Epilasyon, Microblading ve Bölgesel İncelme Merkezi. Instagram üzerinden hızlı randevu oluşturun.">
+    <meta name="keywords" content="güzellik merkezi, cilt bakımı, hydrafacial, lazer epilasyon, microblading, bölgesel incelme, alsancak güzellik salonu">
+    <title>LuxeAura Beauty & Wellness | Güzellik & Estetik Merkezi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Design Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <i class="fas fa-sparkles" style="color: var(--primary-rose-gold);"></i>
+                Luxe<span>Aura</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Anasayfa</a></li>
+                <li><a href="#quiz" class="nav-link">Cilt Analizi</a></li>
+                <li><a href="#services" class="nav-link">İşlemlerimiz</a></li>
+                <li><a href="#before-after" class="nav-link">Öncesi / Sonrası</a></li>
+                <li><a href="#why-us" class="nav-link">Neden Biz</a></li>
+                <li><a href="#reviews" class="nav-link">Yorumlar</a></li>
+                <li><a href="#faq" class="nav-link">SSS</a></li>
+                <li><a href="#contact" class="nav-link">İletişim</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 0.8rem; align-items: center;">
+                <button class="btn btn-instagram" onclick="openInstagramBookingModal('Genel Danışmanlık ve Randevu')">
+                    <i class="fab fa-instagram"></i> Randevu Al
+                </button>
+                <button class="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i> İzmir'in Prestijli Güzellik & Bakım Salonu
+                </div>
+                <h1 class="hero-title">
+                    Işıltınızı Keşfedin, <br>
+                    <span class="highlight">Doğal Güzelliğinize</span> <br>
+                    Değer Katın
+                </h1>
+                <p class="hero-description">
+                    Uzman estetisyen kadromuz, FDA onaylı medikal cihazlarımız ve kişiye özel bakım protokollerimiz ile cildinize hak ettiği lüks dokunuşu sunuyoruz.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-instagram" onclick="openInstagramBookingModal('Hızlı Randevu Talebi')">
+                        <i class="fab fa-instagram"></i> Instagram'dan Randevu Oluştur
+                    </button>
+                    <a href="#services" class="btn btn-outline">
+                        <i class="fas fa-sparkles"></i> İşlemleri İncele
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10K+</h3>
+                        <p>Mutlu Müşteri</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>12+</h3>
+                        <p>Yıllık Deneyim</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>%99</h3>
+                        <p>Memnuniyet Oranı</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="hero-img-card">
+                    <img src="./images/hero.png" alt="LuxeAura Güzellik Salonu İç Mekan">
+                </div>
+                <div class="floating-card floating-card-1">
+                    <div class="floating-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="floating-text">
+                        <h5>Hydrafacial Care</h5>
+                        <p>Derinlemesine Cilt Temizliği</p>
+                    </div>
+                </div>
+                <div class="floating-card floating-card-2">
+                    <div class="floating-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="floating-text">
+                        <h5>Diode Buz Lazer</h5>
+                        <p>Ağrısız & Acısız Epilasyon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE QUIZ SECTION -->
+    <section id="quiz" class="section quiz-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Akıllı Güzellik Danışmanı</span>
+                <h2 class="section-title">Hangi İşlem Sizin İçin En Doğrusu?</h2>
+                <p class="section-subtitle">2 adımlı hızlı testimizi çözerek cildinize ve ihtiyacınıza en uygun bakım protokolünü anında keşfedin.</p>
+            </div>
+
+            <div class="quiz-card">
+                <!-- Quiz Step 1 -->
+                <div class="quiz-step active" data-quiz-step="1">
+                    <h3 class="quiz-question">1. Temel Güzellik Hedefiniz Nedir?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-value="skin-care">
+                            <i class="fas fa-pump-soap"></i>
+                            <span>Pürüzsüz & Canlı Cilt</span>
+                        </div>
+                        <div class="quiz-option" data-value="smooth-skin">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Kalıcı Tüysüzlük (Lazer)</span>
+                        </div>
+                        <div class="quiz-option" data-value="makeup">
+                            <i class="fas fa-eye"></i>
+                            <span>Kalıcı Kaş & Kirpik Bakımı</span>
+                        </div>
+                        <div class="quiz-option" data-value="slimming">
+                            <i class="fas fa-spa"></i>
+                            <span>Bölgesel İncelme & Selülit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Step 2 -->
+                <div class="quiz-step" data-quiz-step="2">
+                    <h3 class="quiz-question">2. Cilt Tipinizi Veya Önceliğinizi Belirtin</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-value="sensitive">
+                            <i class="fas fa-feather"></i>
+                            <span>Hassas / Kuru Cilt</span>
+                        </div>
+                        <div class="quiz-option" data-value="oily">
+                            <i class="fas fa-tint"></i>
+                            <span>Yağlı / Akneye Eğilimli</span>
+                        </div>
+                        <div class="quiz-option" data-value="combination">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Karma / Normal Cilt</span>
+                        </div>
+                        <div class="quiz-option" data-value="aging">
+                            <i class="fas fa-gem"></i>
+                            <span>Anti-Aging / Leke Bakımı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Result -->
+                <div id="quiz-result" class="quiz-result">
+                    <div class="result-badge">✨ Sizin İçin Özel Tavsiyemiz</div>
+                    <h3 id="recommendation-name" style="font-size: 2rem; margin-bottom: 0.8rem; color: var(--text-main);">Hydrafacial Medikal Cilt Bakımı</h3>
+                    <p id="recommendation-desc" style="color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">Cilt yapınıza en uygun işlem.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <button class="btn btn-instagram" onclick="openInstagramBookingModal(document.getElementById('recommendation-name').innerText)">
+                            <i class="fab fa-instagram"></i> Tavsiye Edilen İşlem İçin Randevu Al
+                        </button>
+                        <button class="btn btn-outline" onclick="resetQuiz()">
+                            <i class="fas fa-redo"></i> Testi Tekrarla
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SHOWCASE SECTION -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Güzellik Kataloğumuz</span>
+                <h2 class="section-title">Uzmanlık Alanlarımız & İşlemlerimiz</h2>
+                <p class="section-subtitle">Tüm işlemlerimiz steril klinik koşullarında, alanında uzman estetisyenler tarafından titizlikle uygulanmaktadır.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">Tüm İşlemler</button>
+                <button class="filter-btn" data-filter="cilt">Cilt Bakımı</button>
+                <button class="filter-btn" data-filter="lazer">Lazer Epilasyon</button>
+                <button class="filter-btn" data-filter="kalici-makyaj">Kalıcı Makyaj</button>
+                <button class="filter-btn" data-filter="vucut">Bölgesel İncelme</button>
+            </div>
+
+            <!-- Dynamic Services Grid -->
+            <div id="services-grid" class="services-grid">
+                <!-- Content will be injected via app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER COMPARISON SECTION -->
+    <section id="before-after" class="section before-after-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag" style="background: rgba(216,164,143,0.2); color: #E6C687;">Gerçek Değişimler</span>
+                <h2 class="section-title">Öncesi & Sonrası Sonuçlar</h2>
+                <p class="section-subtitle">Danışanlarımızın ilk seans sonrasındaki gözle görülür ışıl ışıl cilt değişimini kaydırarak inceleyin.</p>
+            </div>
+
+            <!-- Draggable Comparison Slider -->
+            <div id="ba-slider" class="ba-slider-container">
+                <div class="ba-image ba-before" style="background-image: url('./images/hydrafacial.png');">
+                    <span class="ba-label before-label">SONRASI (Işıl Işıl Cilt)</span>
+                </div>
+                <div class="ba-image ba-after">
+                    <img src="./images/hero.png" alt="Öncesi Cilt Durumu">
+                    <span class="ba-label after-label">ÖNCESİ (Mat Görünüm)</span>
+                </div>
+                <div class="ba-handle">
+                    <i class="fas fa-arrows-alt-h"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US & EXPERT TEAM -->
+    <section id="why-us" class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Aura Ayrıcalığı</span>
+                <h2 class="section-title">Neden LuxeAura'yı Tercih Etmelisiniz?</h2>
+                <p class="section-subtitle">Güzelliğinizi şansa bırakmıyoruz; hijyen, konfor ve yüksek teknolojiyi tek çatı altında buluşturuyoruz.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Uzman Kadro</h4>
+                    <p>Sertifikalı ve 10 yılı aşkın medikal estetik tecrübesine sahip profesyonel estetisyenler.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h4>%100 Hijyen Standardı</h4>
+                    <p>Her danışan için kişiye özel tek kullanımlık steril başlıklar ve sürekli dezenfekte edilen odalar.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4>FDA Onaylı Cihazlar</h4>
+                    <p>Dünya standartlarında güvenlik ve etkinlik sertifikalarına sahip son sistem medikal teknolojiler.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Kişiye Özel Danışmanlık</h4>
+                    <p>Cilt analiz cihazı ile cildinizin derin haritası çıkarılarak hazırlanan kişisel protokoller.</p>
+                </div>
+            </div>
+
+            <!-- Team Showcase Box -->
+            <div class="team-wrapper">
+                <div class="team-img">
+                    <img src="./images/team.png" alt="LuxeAura Uzman Kadro">
+                </div>
+                <div>
+                    <span class="section-tag">Uzman Ekibimiz</span>
+                    <h3 style="font-size: 2.2rem; margin-bottom: 1rem;">Güzelliğiniz Güvenli Ellerde</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                        LuxeAura ekibi olarak amacımız, doğal güzelliğinizi ortaya çıkarmak ve merkemizden her zaman mutlu ayrılmanızı sağlamaktır. İşlem öncesi ücretsiz cilt analizi için bize Instagram üzerinden dilediğiniz an ulaşabilirsiniz.
+                    </p>
+                    <button class="btn btn-instagram" onclick="openInstagramBookingModal('Ücretsiz Cilt Analizi & Randevu')">
+                        <i class="fab fa-instagram"></i> Uzmanlarımızla İletişime Geçin
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="reviews" class="section" style="background: var(--bg-nude-light);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Müşteri Deneyimleri</span>
+                <h2 class="section-title">Danışanlarımız Ne Diyor?</h2>
+                <p class="section-subtitle">Merkezimizi ziyaret eden binlerce mutlu danışanımızın gerçek yorumları.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Hydrafacial medikal bakım seansından sonra cildimdeki o mat görünüm tamamen gitti. Instagram DM üzerinden randevumu çok hızlı oluşturdular, ilgilerine bayıldım!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">SÖ</div>
+                        <div>
+                            <div class="client-name">Selin Öztürk</div>
+                            <div class="client-treatment">Hydrafacial Cilt Bakımı</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Buz başlık lazer epilasyonda 4. seansım bitti ve sonuçlar inanılmaz! Gerçekten hiç acı hissetmiyorsunuz ve personel inanılmaz güler yüzlü."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">AK</div>
+                        <div>
+                            <div class="client-name">Aslı Kaya</div>
+                            <div class="client-treatment">Buz Lazer Epilasyon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Microblading yaptırırken çok tedirgindim ama altın oran çizimi tam istediğim gibi oldu. Doğal görünümü sayesinde çevremdeki herkes hayran kaldı!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">MA</div>
+                        <div>
+                            <div class="client-name">Merve Arslan</div>
+                            <div class="client-treatment">Microblading Kaş Tasarımı</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Aklınıza Takılanlar</span>
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                <p class="section-subtitle">İşlemlerimiz ve randevu süreci hakkında en çok merak edilen soruların cevapları.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item active">
+                    <div class="faq-header">
+                        <span>Buz Başlık Lazer Epilasyon gerçekten acısız mı?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        Evet! Gelişmiş -5°C kontak soğutmalı başlık teknolojimiz sayesinde cilt yüzeyi dondurularak hissizleştirilir. Böylece sıradan lazer cihazlarında hissedilen ağrı veya yanma hissi oluşmaz.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Hydrafacial cilt bakımı ne kadar sıklıkla yapılmalıdır?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        Cildin ideal nem ve gözenek dengesini korumak için ayda 1 kez medikal bakım önerilir. Ancak leke veya akne tedavilerinde 2 haftada bir kür protokolü uygulanabilir.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Instagram üzerinden nasıl randevu alabilirim?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        Sitemizdeki "Randevu Al" butonlarına tıkladığınızda seçtiğiniz işlem otomatik olarak randevu taslağına dönüştürülür ve sizi doğrudan Instagram DM sayfamıza yönlendirir.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Microblading kaş tasarımının kalıcılık süresi nedir?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        Cilt tipinize ve bakımınıza bağlı olarak kalıcılık süresi 12 ile 18 ay arasında değişmektedir. Yılda bir kez tazeleme işlemi önerilir.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT SECTION -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-sparkles" style="color: var(--primary-rose-gold);"></i>
+                        Luxe<span>Aura</span>
+                    </a>
+                    <p>Güzelliğinizi bilim ve estetikle buluşturan prestijli bakım & medikal estetik merkezi.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxeaurabeauty/" target="_blank" class="social-icon" aria-label="Instagram Sayfamız">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp Hattımız">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Anasayfa</a></li>
+                        <li><a href="#quiz">Cilt Analizi Testi</a></li>
+                        <li><a href="#services">İşlemlerimiz</a></li>
+                        <li><a href="#before-after">Öncesi & Sonrası</a></li>
+                        <li><a href="#why-us">Uzman Kadromuz</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">İşlemlerimiz</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Hydrafacial Cilt Bakımı</a></li>
+                        <li><a href="#services">Buz Lazer Epilasyon</a></li>
+                        <li><a href="#services">Microblading Kaş</a></li>
+                        <li><a href="#services">G5 Bölgesel İncelme</a></li>
+                        <li><a href="#services">Kirpik Lifting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">İletişim & Randevu</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Alsancak Mah. Atatürk Cad. No:142/A Konak / İzmir</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+90 (232) 444 88 99</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <span>@luxeaurabeauty (DM Randevu)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Pazartesi - Cumartesi: 09:00 - 19:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LuxeAura Beauty & Wellness. Yazılım Mühendisliği Projesi. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INSTAGRAM RAND EVU MODAL -->
+    <div id="instagram-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('instagram-modal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram Randevu Yönlendirmesi</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem;">
+                    Randevu talebiniz Instagram sayfamıza aktarılacaktır.
+                </p>
+            </div>
+            <div class="modal-body">
+                <div class="booking-summary">
+                    <h5>Seçilen İşlem:</h5>
+                    <p id="selected-treatment-name">Genel Güzellik Danışmanlığı & Randevu</p>
+                </div>
+                <ul class="modal-steps-list">
+                    <li><i class="fas fa-check-circle"></i> "Instagram'da Aç" butonuna tıkladığınızda mesaj panoya otomatik kopyalanır.</li>
+                    <li><i class="fas fa-check-circle"></i> Instagram DM kutumuzda mesajı yapıştırıp gönderebilirsiniz.</li>
+                    <li><i class="fas fa-check-circle"></i> Müşteri temsilcimiz 5 dakika içinde tarihinizi onaylayacaktır.</li>
+                </ul>
+            </div>
+            <button class="btn btn-instagram" style="width: 100%; font-size: 1rem; padding: 1rem;" onclick="redirectToInstagram()">
+                <i class="fab fa-instagram"></i> Instagram DM'de Randevuyu Tamamla
+            </button>
+        </div>
+    </div>
+
+    <!-- SERVICE DETAIL MODAL -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('detail-modal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="detail-modal-body">
+                <!-- Content dynamically populated via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
